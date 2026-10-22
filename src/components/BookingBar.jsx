@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Calendar, Users, Home, Search, ArrowRight } from 'lucide-react';
+import { Calendar, Users, Home, ArrowRight, ShieldCheck, Sparkles, Clock } from 'lucide-react';
 
 export default function BookingBar({ onSearchAvailability }) {
   const [checkIn, setCheckIn] = useState('2026-11-10');
@@ -21,34 +21,37 @@ export default function BookingBar({ onSearchAvailability }) {
     <div id="booking-widget" className="booking-bar-wrapper">
       <div className="booking-bar-container glass-panel">
         <form onSubmit={handleSearch} className="booking-bar-form">
-          {/* Check-In */}
-          <div className="booking-input-group">
-            <label className="booking-label">
-              <Calendar size={14} className="input-icon" />
-              <span>CHECK-IN</span>
-            </label>
-            <input 
-              type="date" 
-              className="booking-date-input" 
-              value={checkIn}
-              onChange={(e) => setCheckIn(e.target.value)}
-            />
-          </div>
+          {/* Check-In and Check-Out Row */}
+          <div className="booking-dates-row">
+            {/* Check-In */}
+            <div className="booking-input-group">
+              <label className="booking-label">
+                <Calendar size={13} className="input-icon" />
+                <span>CHECK-IN</span>
+              </label>
+              <input 
+                type="date" 
+                className="booking-date-input" 
+                value={checkIn}
+                onChange={(e) => setCheckIn(e.target.value)}
+              />
+            </div>
 
-          <div className="booking-divider"></div>
+            <div className="booking-date-sep">→</div>
 
-          {/* Check-Out */}
-          <div className="booking-input-group">
-            <label className="booking-label">
-              <Calendar size={14} className="input-icon" />
-              <span>CHECK-OUT</span>
-            </label>
-            <input 
-              type="date" 
-              className="booking-date-input" 
-              value={checkOut}
-              onChange={(e) => setCheckOut(e.target.value)}
-            />
+            {/* Check-Out */}
+            <div className="booking-input-group">
+              <label className="booking-label">
+                <Calendar size={13} className="input-icon" />
+                <span>CHECK-OUT</span>
+              </label>
+              <input 
+                type="date" 
+                className="booking-date-input" 
+                value={checkOut}
+                onChange={(e) => setCheckOut(e.target.value)}
+              />
+            </div>
           </div>
 
           <div className="booking-divider"></div>
@@ -56,7 +59,7 @@ export default function BookingBar({ onSearchAvailability }) {
           {/* Guests */}
           <div className="booking-input-group">
             <label className="booking-label">
-              <Users size={14} className="input-icon" />
+              <Users size={13} className="input-icon" />
               <span>SANCTUARY GUESTS</span>
             </label>
             <select 
@@ -77,7 +80,7 @@ export default function BookingBar({ onSearchAvailability }) {
           {/* Villa Type */}
           <div className="booking-input-group">
             <label className="booking-label">
-              <Home size={14} className="input-icon" />
+              <Home size={13} className="input-icon" />
               <span>EXPERIENCE VILLA</span>
             </label>
             <select 
@@ -97,16 +100,25 @@ export default function BookingBar({ onSearchAvailability }) {
           <div className="booking-action-group">
             <button type="submit" className="btn-gold booking-submit-btn">
               <span>CHECK AVAILABILITY</span>
-              <ArrowRight size={16} />
+              <ArrowRight size={15} />
             </button>
           </div>
         </form>
 
-        {/* Subtle Luxury Guarantee Footnote */}
+        {/* Clean Luxury Perks Strip */}
         <div className="booking-bar-perks">
-          <span>✦ Best Rate & Complimentary Plantation High Tea Guaranteed</span>
-          <span>✦ Flexible 48-Hour Cancellation</span>
-          <span>✦ 24/7 Dedicated Estate Butler</span>
+          <div className="perk-pill">
+            <Sparkles size={11} className="text-gold" />
+            <span>Best Rate Guaranteed</span>
+          </div>
+          <div className="perk-pill">
+            <Clock size={11} className="text-gold" />
+            <span>Flexible Cancellation</span>
+          </div>
+          <div className="perk-pill">
+            <ShieldCheck size={11} className="text-gold" />
+            <span>24/7 Estate Butler</span>
+          </div>
         </div>
       </div>
     </div>
