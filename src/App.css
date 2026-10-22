@@ -2194,7 +2194,7 @@
 }
 
 /* --------------------------------------------------------------------------
-   12. MOBILE RESPONSIVENESS
+   12. MOBILE RESPONSIVENESS & TOUCH OPTIMIZATION
    -------------------------------------------------------------------------- */
 @media (max-width: 992px) {
   .navbar-nav-row {
@@ -2209,24 +2209,413 @@
   .phone-badge {
     display: none;
   }
+  .villas-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 768px) {
+  /* Section Spacing */
+  .section-container {
+    padding: 3.5rem 1rem;
+  }
+
+  .section-header-center,
+  .section-header-split {
+    margin-bottom: 2rem;
+  }
+
+  .section-header-split {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1rem;
+  }
+
+  .section-header-right {
+    align-items: flex-start;
+    width: 100%;
+  }
+
+  .section-title {
+    font-size: clamp(1.9rem, 7vw, 2.4rem);
+  }
+
+  /* Top Navigation */
+  .navbar-top-container {
+    padding: 0.75rem 1rem;
+  }
+
+  .brand-logo-frame {
+    width: 38px;
+    height: 38px;
+  }
+
+  .brand-name {
+    font-size: 0.95rem;
+    letter-spacing: 0.12em;
+  }
+
+  .brand-sub {
+    font-size: 0.55rem;
+    letter-spacing: 0.15em;
+  }
+
+  .nav-book-btn {
+    display: none; /* Accessible in mobile drawer and hero */
+  }
+
+  /* Hero Section */
+  .hero-section {
+    padding: 6.5rem 1rem 3.5rem;
+    min-height: 85vh;
+  }
+
+  .hero-badge-pill {
+    padding: 0.35rem 0.85rem;
+    margin-bottom: 1.2rem;
+  }
+
+  .badge-text {
+    font-size: 0.62rem;
+    letter-spacing: 0.18em;
+  }
+
+  .hero-title {
+    font-size: clamp(2.2rem, 9.5vw, 3.2rem);
+    letter-spacing: 0.08em;
+    margin-bottom: 1rem;
+  }
+
+  .hero-subtitle {
+    font-size: 0.92rem;
+    line-height: 1.6;
+    margin-bottom: 1.8rem;
+    padding: 0 0.5rem;
+  }
+
+  .hero-cta-group {
+    flex-direction: column;
+    width: 100%;
+    align-items: center;
+    gap: 0.75rem;
+  }
+
+  .hero-primary-btn,
+  .hero-secondary-btn {
+    width: 100%;
+    max-width: 290px;
+    padding: 0.85rem 1.4rem;
+  }
+
+  .hero-scroll-indicator {
+    display: none;
+  }
+
+  /* Booking Bar */
+  .booking-bar-wrapper {
+    margin-top: -1.5rem;
+    padding: 0 0.85rem;
+  }
+
+  .booking-bar-container {
+    padding: 1.25rem 1rem;
+    border-radius: 4px;
+  }
+
+  .booking-bar-form {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 0.85rem;
+  }
+
+  .booking-input-group {
+    min-width: 100%;
+    width: 100%;
+  }
+
+  .booking-divider {
+    display: none;
+  }
+
+  .booking-action-group {
+    width: 100%;
+    margin-top: 0.4rem;
+  }
+
+  .booking-submit-btn {
+    width: 100%;
+    padding: 0.95rem;
+    justify-content: center;
+  }
+
+  .booking-bar-perks {
+    flex-direction: column;
+    gap: 0.35rem;
+    text-align: center;
+    font-size: 0.68rem;
+    margin-top: 0.9rem;
+    padding-top: 0.8rem;
+  }
+
+  /* Pillars Grid */
+  .pillars-grid {
+    grid-template-columns: 1fr;
+    gap: 1.25rem;
+  }
+
+  .pillar-card {
+    padding: 1.8rem 1.4rem;
+  }
+
+  /* Featured Villas */
+  .villa-filter-tabs {
+    gap: 0.5rem;
+    margin-bottom: 1.5rem;
+  }
+
+  .villa-filter-btn {
+    padding: 0.45rem 0.85rem;
+    font-size: 0.7rem;
+    flex: 1 1 auto;
+    text-align: center;
+  }
+
+  .villas-grid {
+    grid-template-columns: 1fr;
+    gap: 1.8rem;
+  }
+
+  .villa-image-wrapper {
+    height: 230px;
+  }
+
+  .villa-card-content {
+    padding: 1.35rem 1.15rem;
+  }
+
+  .villa-header-row {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.35rem;
+  }
+
+  .villa-title {
+    font-size: 1.35rem;
+  }
+
+  .villa-price-box {
+    text-align: left;
+  }
+
+  .villa-price-amount {
+    font-size: 1.45rem;
+  }
+
+  .villa-specs-grid {
+    grid-template-columns: 1fr;
+    gap: 0.5rem;
+    padding: 0.8rem 0;
+    margin-bottom: 1.2rem;
+  }
+
+  .villa-actions-row {
+    flex-direction: column;
+    gap: 0.6rem;
+  }
+
+  .villa-detail-btn,
+  .villa-reserve-btn {
+    width: 100%;
+    padding: 0.85rem;
+    justify-content: center;
+  }
+
+  /* Curated Moments */
+  .moments-grid {
+    grid-template-columns: 1fr;
+    gap: 1.4rem;
+  }
+
+  .moment-card {
+    height: 310px;
+  }
+
+  .moment-bottom-info {
+    padding: 1.25rem;
+  }
+
+  .moment-title {
+    font-size: 1.3rem;
+  }
+
+  .moment-description {
+    font-size: 0.8rem;
+    line-height: 1.5;
+  }
+
+  /* Testimonials */
+  .testimonial-section {
+    padding: 4rem 1.1rem;
+  }
+
+  .testimonial-quote {
+    font-size: 1.25rem;
+    line-height: 1.55;
+    margin-bottom: 1.5rem;
+  }
+
+  /* Story / Contact Card */
+  .story-card {
+    padding: 1.8rem 1.1rem;
+  }
+
+  .story-grid {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+
+  .story-cta-row button {
+    width: 100%;
+  }
+
+  /* Gallery */
+  .gallery-masonry-grid {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+
+  .gallery-card {
+    height: 220px;
+  }
+
+  /* Footer */
+  .site-footer {
+    padding: 3.5rem 1.1rem 1.8rem;
+  }
+
+  .footer-top-container {
+    grid-template-columns: 1fr;
+    gap: 2.2rem;
+    margin-bottom: 2.5rem;
+  }
+
+  .footer-bottom-container {
+    flex-direction: column;
+    text-align: center;
+    gap: 0.8rem;
+  }
+
+  .footer-legal-links {
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+  }
+
+  /* Modals */
+  .modal-backdrop {
+    padding: 0.75rem;
+  }
+
+  .booking-modal-drawer,
+  .villa-detail-modal,
+  .experience-detail-modal,
+  .qr-popup-modal {
+    padding: 1.4rem 1.1rem;
+    max-height: 94vh;
+    border-radius: 4px;
+    width: 100%;
+  }
+
+  .modal-title {
+    font-size: 1.5rem;
+  }
+
+  .villa-selector-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .dates-row {
+    grid-template-columns: 1fr;
+  }
+
+  .villa-detail-grid {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+
+  .detail-main-img-wrap {
+    height: 220px;
+  }
+
+  .detail-specs-bar {
+    grid-template-columns: 1fr;
+    gap: 0.6rem;
+  }
+
+  .amenities-check-grid {
+    grid-template-columns: 1fr;
+  }
+
+  /* WhatsApp Widget */
+  .whatsapp-floating-wrapper {
+    bottom: 1.25rem;
+    right: 1.25rem;
+  }
+
+  .whatsapp-btn {
+    width: 50px;
+    height: 50px;
+  }
+
+  .whatsapp-chat-popup {
+    width: calc(100vw - 2.5rem);
+    right: -0.25rem;
+    max-width: 320px;
+  }
+}
+
+/* Extra Small Phones (320px - 380px) */
+@media (max-width: 380px) {
+  .hero-title {
+    font-size: 1.95rem;
+  }
+
+  .brand-name {
+    font-size: 0.85rem;
+  }
+
+  .brand-sub {
+    font-size: 0.5rem;
+  }
+
+  .pillar-title {
+    font-size: 1.4rem;
+  }
+
+  .villa-title {
+    font-size: 1.22rem;
+  }
 }
 
 .mobile-drawer {
   position: fixed;
   inset: 0;
   background: rgba(8, 13, 9, 0.98);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
   z-index: 2500;
-  padding: 2rem;
+  padding: 1.8rem 1.5rem;
   display: flex;
   flex-direction: column;
+  overflow-y: auto;
 }
 
 .mobile-drawer-header {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin-bottom: 2.5rem;
-  padding-bottom: 1rem;
+  margin-bottom: 2rem;
+  padding-bottom: 0.85rem;
   border-bottom: 1px solid var(--gold-border);
 }
 
@@ -2235,27 +2624,28 @@
   border: none;
   color: var(--gold-light);
   cursor: pointer;
+  padding: 0.4rem;
 }
 
 .mobile-links-list {
   list-style: none;
   display: flex;
   flex-direction: column;
-  gap: 1.5rem;
+  gap: 1.2rem;
 }
 
 .mobile-link-item {
   color: #ffffff;
   font-family: var(--font-serif);
-  font-size: 1.6rem;
+  font-size: 1.4rem;
   text-decoration: none;
-  letter-spacing: 0.1em;
+  letter-spacing: 0.08em;
   transition: var(--transition-fast);
 }
 
 .mobile-link-item:hover {
   color: var(--gold-light);
-  padding-left: 10px;
+  padding-left: 8px;
 }
 
 .mobile-drawer-actions {
